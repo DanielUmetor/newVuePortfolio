@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <h1></h1>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AboutView'
+};
+</script>
+
+<style scoped>
+.home {
+  padding: 20px;
+  background-color: #0D0D0D;
+  color: #EEEEEE;
+}
+</style>
