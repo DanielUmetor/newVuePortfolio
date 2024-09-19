@@ -5,13 +5,10 @@
         <h1 class="welcome-text">Welcome, I'm Daniel Umetor</h1>
         <h2 class="sub-text">An Aspiring Software Developer</h2>
         <div class="intro-text">
-          <p>
-            I am passionate about building innovative and scalable web applications. Let's explore my journey as a developer and the projects I have worked on.
-          </p>
         </div>
       </div>
       <div class="image-section">
-        <img class="profile-image" src="https://danielumetor.github.io/allimages/20240422_092918.jpg" alt="Daniel Umetor">
+        <img class="profile-image" src="https://danielumetor.github.io/allimages/20240422_092918.jpg" alt="Daniel Umetor" loading="lazy">
       </div>
     </div>
   </div>
@@ -71,7 +68,7 @@ export default {
   animation: fadeIn 5s ease-in-out;
 }
 
-/* Right-aligned profile image with adjusted size and position */
+/* Right-aligned profile image with larger circle */
 .image-section {
   display: flex;
   justify-content: center;
@@ -81,9 +78,10 @@ export default {
 
 .profile-image {
   border-radius: 50%;
-  width: 350px; /* Increased size */
-  height: 350px; /* Increased size */
+  width: 450px; /* Increased size for the circle */
+  height: 450px; /* Increased size */
   object-fit: cover;
+  object-position: top; /* Ensures the head is fully shown */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   animation: fadeIn 4s ease-in-out;
 }
