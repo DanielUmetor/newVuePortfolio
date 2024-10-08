@@ -89,9 +89,8 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
+/* Only the font has been changed without affecting layout or sizes */
 .education-experience-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
@@ -99,7 +98,7 @@ export default {
   padding: 20px;
   background-color: #0D0D0D;
   color: #EEEEEE;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif; /* Changed to 'Lato' */
   justify-content: center;
 }
 
@@ -141,7 +140,7 @@ export default {
 }
 
 .timeline-logo {
-  width: 12rem; /* Adjust the logo size */
+  width: 12rem;
   object-fit: contain;
 }
 

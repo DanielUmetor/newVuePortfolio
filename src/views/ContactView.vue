@@ -1,41 +1,41 @@
 <template>
-  <div class="contact-container">
-    <h1 class="contact-heading">Contact Me</h1>
+  <div class="contact-page">
+    <h1 class="contact-title">Get In Touch</h1>
 
-    <div class="contact-content">
+    <div class="contact-wrapper">
       <!-- Contact Info Section -->
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
-          <div class="contact-details">
+          <div class="info-text">
             <h3>Email</h3>
             <p>dnumetor@gmail.com</p>
           </div>
         </div>
         <div class="contact-item">
           <i class="fas fa-phone-alt"></i>
-          <div class="contact-details">
+          <div class="info-text">
             <h3>Phone</h3>
             <p>073 878 0358</p>
           </div>
         </div>
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <div class="contact-details">
+          <div class="info-text">
             <h3>Location</h3>
             <p>24 Postma Street, Oakdale, Bellville</p>
           </div>
         </div>
         <div class="contact-item">
           <i class="fas fa-linkedin"></i>
-          <div class="contact-details">
+          <div class="info-text">
             <h3>LinkedIn</h3>
             <p><a href="https://www.linkedin.com/in/daniel-umetor-3aa7231aa/" target="_blank">Visit my profile</a></p>
           </div>
         </div>
         <div class="contact-item">
           <i class="fab fa-github"></i>
-          <div class="contact-details">
+          <div class="info-text">
             <h3>GitHub</h3>
             <p><a href="https://github.com/DanielUmetor" target="_blank">View my repositories</a></p>
           </div>
@@ -43,7 +43,7 @@
       </div>
 
       <!-- Contact Form Section -->
-      <div class="contact-form-container">
+      <div class="contact-form-wrapper">
         <form class="contact-form" @submit.prevent="sendEmail">
           <div class="form-group">
             <i class="fas fa-user"></i>
@@ -55,7 +55,7 @@
           </div>
           <div class="form-group">
             <i class="fas fa-comment-alt"></i>
-            <textarea v-model="message" placeholder="Your Message" rows="4" required></textarea>
+            <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
           </div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
@@ -98,117 +98,142 @@ export default {
 </script>
 
 <style scoped>
-.contact-container {
-  padding: 20px;
-  background-color: #0D0D0D;
-  color: #EEEEEE;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 0; /* Reset top margin */
-}
-
-.contact-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #3E7CB1;
-  border-bottom: 2px solid #3E7CB1;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-top: 20px; /* Move the header right below the navbar */
-}
-
-.contact-content {
+/* Page layout */
+.contact-page {
   display: flex;
-  justify-content: center; /* Center the form */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Change to flex-start */
+  min-height: 100vh;
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px; /* Reduced padding */
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+.contact-title {
+  font-size: 2.5rem; /* Reduced font size */
+  margin-top: 0; /* Removed margin-top */
+  margin-bottom: 20px; /* Reduced bottom margin */
+}
+
+/* Contact Info & Form Section */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px; /* Reduced gap */
+  padding: 20px; /* Adjusted padding */
 }
 
+/* Contact Info */
 .contact-info {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap */
 }
 
+/* Individual Contact Item */
 .contact-item {
-  background-color: #2E2E2E;
-  border: 2px solid #3E7CB1;
-  border-radius: 10px;
-  padding: 10px;
   display: flex;
   align-items: center;
+  background-color: #1C1C1C;
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #00ADB5;
 }
 
 .contact-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.contact-details h3 {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #3E7CB1;
-}
-
-.contact-details p, .contact-details a {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #EEEEEE;
+  box-shadow: 0 6px 15px #00ADB5;
 }
 
 .contact-item i {
-  font-size: 1.2rem;
-  color: #3E7CB1;
-  margin-right: 10px;
+  font-size: 1.5rem;
+  margin-right: 10px; /* Reduced margin */
+  color: #00ADB5;
 }
 
-.contact-form-container {
+.info-text h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #00ADB5;
+}
+
+.info-text p,
+.info-text a {
+  margin: 0;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
   flex: 1;
-  background-color: #2E2E2E;
-  padding: 30px;
-  border: 2px solid #3E7CB1;
+  background-color: #1C1C1C;
+  padding: 20px; /* Reduced padding */
   border-radius: 10px;
-  max-width: 400px; /* Restrict the width for better centering */
+  border: 2px solid #00ADB5;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 15px; /* Reduced gap */
 }
 
 .form-group {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  background-color: #262626;
+  padding: 8px; /* Reduced padding */
+  border-radius: 5px;
 }
 
 .form-group i {
+  color: #00ADB5;
+  margin-right: 8px; /* Reduced margin */
   font-size: 1.2rem;
-  color: #3E7CB1;
-  margin-right: 8px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  background-color: #1C1C1C;
-  border: 2px solid #3E7CB1;
-  color: #EEEEEE;
-  border-radius: 5px;
+input,
+textarea {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 8px; /* Reduced padding */
   outline: none;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #AAAAAA;
+input::placeholder,
+textarea::placeholder {
+  color: #BBBBBB;
 }
 
+textarea {
+  resize: none;
+  height: 100px; /* Adjusted height */
+}
+
+/* Submit Button */
 .submit-btn {
-  padding: 10px 20px;
-  background-color: #3E7CB1;
-  color: #EEEEEE;
+  padding: 10px; /* Reduced padding */
+  background-color: #00ADB5;
+  color: #121212;
+  font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -216,11 +241,6 @@ input::placeholder, textarea::placeholder {
 }
 
 .submit-btn:hover {
-  background-color: #2D5D8D;
-}
-
-textarea {
-  resize: none;
-  flex-grow: 1;
+  background-color: #D17B00;
 }
 </style>
