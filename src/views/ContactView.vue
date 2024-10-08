@@ -1,67 +1,69 @@
 <template>
-  <div class="contact-page">
-    <h1 class="contact-title">Get In Touch</h1>
+  <transition name="fade" mode="out-in">
+    <div class="contact-page" key="contact-page">
+      <h1 class="contact-title">Get In Touch</h1>
 
-    <div class="contact-wrapper">
-      <!-- Contact Info Section -->
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <div class="info-text">
-            <h3>Email</h3>
-            <p>dnumetor@gmail.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone-alt"></i>
-          <div class="info-text">
-            <h3>Phone</h3>
-            <p>073 878 0358</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="info-text">
-            <h3>Location</h3>
-            <p>24 Postma Street, Oakdale, Bellville</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-linkedin"></i>
-          <div class="info-text">
-            <h3>LinkedIn</h3>
-            <p><a href="https://www.linkedin.com/in/daniel-umetor-3aa7231aa/" target="_blank">Visit my profile</a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <div class="info-text">
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/DanielUmetor" target="_blank">View my repositories</a></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Form Section -->
-      <div class="contact-form-wrapper">
-        <form class="contact-form" @submit.prevent="sendEmail">
-          <div class="form-group">
-            <i class="fas fa-user"></i>
-            <input type="text" v-model="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
+      <div class="contact-wrapper">
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+          <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <input type="email" v-model="email" placeholder="Your Email" required />
+            <div class="info-text">
+              <h3>Email</h3>
+              <p>dnumetor@gmail.com</p>
+            </div>
           </div>
-          <div class="form-group">
-            <i class="fas fa-comment-alt"></i>
-            <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="info-text">
+              <h3>Phone</h3>
+              <p>073 878 0358</p>
+            </div>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info-text">
+              <h3>Location</h3>
+              <p>24 Postma Street, Oakdale, Bellville</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-linkedin"></i>
+            <div class="info-text">
+              <h3>LinkedIn</h3>
+              <p><a href="https://www.linkedin.com/in/daniel-umetor-3aa7231aa/" target="_blank">Visit my profile</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div class="info-text">
+              <h3>GitHub</h3>
+              <p><a href="https://github.com/DanielUmetor" target="_blank">View my repositories</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" @submit.prevent="sendEmail">
+            <div class="form-group">
+              <i class="fas fa-user"></i>
+              <input type="text" v-model="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" v-model="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <i class="fas fa-comment-alt"></i>
+              <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -110,6 +112,15 @@ export default {
   font-family: 'Poppins', sans-serif;
   padding: 20px; /* Reduced padding */
   box-sizing: border-box;
+}
+
+/* Fade Transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Added transform */
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+  transform: translateY(20px); /* Move content up slightly when entering */
 }
 
 /* Title Styling */
@@ -241,6 +252,6 @@ textarea {
 }
 
 .submit-btn:hover {
-  background-color: #D17B00;
+  background-color: #00ADB5;
 }
 </style>

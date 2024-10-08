@@ -2,51 +2,53 @@
   <div class="education-experience-container">
     <div class="education-section">
       <h2 class="section-heading">Education</h2>
-
       <div class="timeline">
-        <div 
-          class="timeline-item"
-          v-for="(event, index) in educationTimeline" 
-          :key="index"
-          :class="index % 2 === 0 ? 'image-left' : 'image-right'"
-        >
-          <img 
-            v-if="event.logo" 
-            :src="event.logo" 
-            alt="Logo"
-            class="timeline-logo"
-          />
-          <div class="timeline-content">
-            <div class="timeline-date">{{ event.date }}</div>
-            <h3 class="timeline-title">{{ event.title }}</h3>
-            <p class="timeline-description">{{ event.description }}</p>
+        <transition-group name="fade-slide" tag="div">
+          <div 
+            class="timeline-item"
+            v-for="(event, index) in educationTimeline" 
+            :key="index"
+            :class="index % 2 === 0 ? 'image-left' : 'image-right'"
+          >
+            <img 
+              v-if="event.logo" 
+              :src="event.logo" 
+              alt="Logo"
+              class="timeline-logo"
+            />
+            <div class="timeline-content">
+              <div class="timeline-date">{{ event.date }}</div>
+              <h3 class="timeline-title">{{ event.title }}</h3>
+              <p class="timeline-description">{{ event.description }}</p>
+            </div>
           </div>
-        </div>
+        </transition-group>
       </div>
     </div>
 
     <div class="experience-section">
       <h2 class="section-heading">Experience</h2>
-
       <div class="timeline">
-        <div 
-          class="timeline-item"
-          v-for="(job, index) in experienceTimeline" 
-          :key="index"
-          :class="index % 2 === 0 ? 'image-left' : 'image-right'"
-        >
-          <img 
-            v-if="job.logo" 
-            :src="job.logo" 
-            alt="Logo"
-            class="timeline-logo"
-          />
-          <div class="timeline-content">
-            <div class="timeline-date">{{ job.date }}</div>
-            <h3 class="timeline-title">{{ job.title }}</h3>
-            <p class="timeline-description">{{ job.description }}</p>
+        <transition-group name="fade-slide" tag="div">
+          <div 
+            class="timeline-item"
+            v-for="(job, index) in experienceTimeline" 
+            :key="index"
+            :class="index % 2 === 0 ? 'image-left' : 'image-right'"
+          >
+            <img 
+              v-if="job.logo" 
+              :src="job.logo" 
+              alt="Logo"
+              class="timeline-logo"
+            />
+            <div class="timeline-content">
+              <div class="timeline-date">{{ job.date }}</div>
+              <h3 class="timeline-title">{{ job.title }}</h3>
+              <p class="timeline-description">{{ job.description }}</p>
+            </div>
           </div>
-        </div>
+        </transition-group>
       </div>
     </div>
   </div>
@@ -60,14 +62,13 @@ export default {
       {
         date: 'April 2024 - September 2024',
         title: 'Full Stack Coding Course at LifeChoices Coding Academy',
-        description: 'Graduated from an intensive full-stack development bootcamp focused on modern web technologies as well as Personal and Professional  Development.',
-
+        description: 'Graduated from an intensive full-stack development bootcamp focused on modern web technologies as well as Personal and Professional Development.',
         logo: 'https://danielumetor.github.io/allimages/images/download.png' // LifeChoices Academy logo
       },
       {
         date: '2018 - 2023',
         title: 'Bellville Technical High School',
-        description: 'Completed Matric with a Bachelor\'s Pass, specializing in technology and engineering subjects. At Bellville Technical High School, students participate in various activities and learn technical skills, with a focus on vocational subjects starting in Grade 8. Engineering Graphics and Design is a required subject.  ',
+        description: 'Completed Matric with a Bachelor\'s Pass, specializing in technology and engineering subjects.',
         logo: 'https://danielumetor.github.io/allimages/images/bths.jfif' // Bellville Technical High School logo
       }
     ];
@@ -76,8 +77,8 @@ export default {
       {
         date: 'September 2024 - Present',
         title: 'Intern at LC Studio',
-        description: 'At LC Studio, individuals can learn about WordPress website development, participate in a comprehensive 6-month full-stack web development course, and engage in an industry-related internship for 6 months. The program includes a technical assessment as part of potential employment interviews, focusing on practical skills in web development.',
-        logo: 'https://danielumetor.github.io/allimages/download%20(1).png' // Add your LC Studio logo link here
+        description: 'At LC Studio, individuals can learn about WordPress website development...',
+        logo: 'https://danielumetor.github.io/allimages/download%20(1).png' // LC Studio logo
       }
     ];
 
@@ -90,7 +91,6 @@ export default {
 </script>
 
 <style scoped>
-/* Only the font has been changed without affecting layout or sizes */
 .education-experience-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
@@ -98,11 +98,9 @@ export default {
   padding: 20px;
   background-color: #0D0D0D;
   color: #EEEEEE;
-  font-family: 'Lato', sans-serif; /* Changed to 'Lato' */
-  justify-content: center;
+  font-family: 'Lato', sans-serif; 
 }
 
-/* For smaller screens, stack the sections vertically */
 @media (max-width: 768px) {
   .education-experience-container {
     grid-template-columns: 1fr; /* Single column layout */
@@ -116,7 +114,6 @@ export default {
   text-align: center;
 }
 
-/* Timeline layout for both sections */
 .timeline {
   padding: 20px;
   background-color: #1E1E1E;
@@ -144,12 +141,10 @@ export default {
   object-fit: contain;
 }
 
-/* Align image on left and text on right */
 .image-left {
   flex-direction: row;
 }
 
-/* Align image on right and text on left */
 .image-right {
   flex-direction: row-reverse;
 }
@@ -169,5 +164,15 @@ export default {
 .timeline-description {
   font-size: 0.9rem;
   line-height: 1.4;
+}
+
+/* Animation Styles */
+.fade-slide-enter-active, .fade-slide-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-slide-enter, .fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
