@@ -144,13 +144,20 @@ h2 {
   font-size: 50px;
   margin-bottom: 10px;
   color: var(--accent-color);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, outline 0.3s ease;
 }
 
+/* Updated hover effect with blue outline */
+/* Updated hover effect with blue outline */
+/* Updated hover effect with navbar color */
 .skill:hover i {
   transform: scale(1.1);
   color: var(--primary-color);
+  outline: 3px solid #00ADB5; /* Match navbar hover color */
+  outline-offset: 5px;
 }
+
+
 
 .skill span {
   font-size: 1rem;

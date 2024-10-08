@@ -1,13 +1,29 @@
 <template>
-  <div class="education-container">
-    <h1 class="education-heading">My Educational Journey</h1>
+  <div class="education-experience-container">
+    <div class="education-section">
+      <h2 class="section-heading">Education</h2>
 
-    <div class="timeline">
-      <div class="timeline-item" v-for="(event, index) in timelineEvents" :key="index">
-        <div class="timeline-date">{{ event.date }}</div>
-        <div class="timeline-content">
-          <h3 class="timeline-title">{{ event.title }}</h3>
-          <p class="timeline-description">{{ event.description }}</p>
+      <div class="timeline">
+        <div class="timeline-item" v-for="(event, index) in educationTimeline" :key="index">
+          <div class="timeline-date">{{ event.date }}</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">{{ event.title }}</h3>
+            <p class="timeline-description">{{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <h2 class="section-heading">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item" v-for="(job, index) in experienceTimeline" :key="index">
+          <div class="timeline-date">{{ job.date }}</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">{{ job.title }}</h3>
+            <p class="timeline-description">{{ job.description }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -18,54 +34,68 @@
 export default {
   name: 'EducationView',
   setup() {
-    const timelineEvents = [
+    const educationTimeline = [
       {
-        date: '2024',
-        title: 'Full Stack Coding Course at LifeChoices Academy',
+        date: 'April 2024 - September 2024',
+        title: 'Full Stack Coding Course at LifeChoices Coding Academy',
         description: 'Graduated from an intensive full-stack development bootcamp focused on modern web technologies.'
       },
       {
-        date: '2023',
+        date: '2018 - 2023',
         title: 'Bellville Technical High School',
         description: 'Completed Matric with a Bachelor\'s Pass, specializing in technology and engineering subjects.'
       }
     ];
 
+    const experienceTimeline = [
+      {
+        date: 'September 2024 - Present',
+
+        title: 'Intern at LC Studio',
+        description: 'Began working as a Intern at LC Studio'
+      }
+    ];
+
     return {
-      timelineEvents
+      educationTimeline,
+      experienceTimeline
     };
   }
 };
 </script>
 
 <style scoped>
-.education-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 60px); /* Adjust based on your navbar height */
-  padding: 0 20px;
+.education-experience-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 40px;
+  padding: 20px;
   background-color: #0D0D0D;
   color: #EEEEEE;
   font-family: 'Roboto', sans-serif;
-  text-align: center; /* Centers text */
+  justify-content: center;
 }
 
-.education-heading {
-  font-size: 2.5rem;
+/* For smaller screens, stack the sections vertically */
+@media (max-width: 768px) {
+  .education-experience-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
+
+.section-heading {
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #3E7CB1;
-  border-bottom: 2px solid #3E7CB1;
-  padding-bottom: 10px;
-  width: 100%;
+  text-align: center;
 }
 
-/* Timeline layout */
+/* Timeline layout for both sections */
 .timeline {
-  width: 100%; /* Takes full width */
-  max-width: 600px; /* Optional: limit the width */
   padding: 20px;
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-item {
@@ -81,9 +111,8 @@ export default {
 
 .timeline-content {
   padding: 10px;
-  background-color: #1E1E1E;
+  background-color: #2A2A2A;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-title {
