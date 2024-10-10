@@ -1,79 +1,81 @@
-<template>
-  <div class="about-container">
-    <section class="intro">
-      <h1 class="animate-slide-in">About Me</h1>
-      <p class="animate-fade-in">
-        I am Daniel Umetor, a 19-year-old high school graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
-      </p>
-    </section>
+  <template>
+    <div class="about-container">
+      <section class="intro">
+        <h1 class="animate-slide-in">About Me</h1>
+        <p class="animate-fade-in">
+          I am Daniel Umetor, a 19-year-old high school graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
+        </p>
+      </section>
 
-    <hr class="section-divider" />
+      <hr class="section-divider" />
 
-    <section class="skills animate-fade-in">
-      <h2>Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skill animate-pop-in">
-          <i class="fab fa-html5"></i>
-          <span>HTML</span>
+      <section class="skills animate-fade-in">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+          <div class="skill animate-pop-in">
+            <i class="fab fa-html5"></i>
+            <span>HTML</span>
+          </div>
+          <div class="skill animate-pop-in">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS</span>
+          </div>
+          <div class="skill animate-pop-in">
+            <i class="fab fa-git"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill animate-pop-in">
+            <i class="fab fa-bootstrap"></i>
+            <span>Bootstrap</span>
+          </div>
+          <div class="skill animate-pop-in figma-icon">
+            <i class="fab fa-figma"></i>
+            <span>Figma</span>
+          </div>
+          <div class="skill animate-pop-in">
+            <i class="fab fa-js-square"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill animate-pop-in vuejs-icon">
+            <i class="fab fa-vuejs"></i>
+            <span>VueJS</span>
+          </div>
+          <div class="skill animate-pop-in nodejs-icon">
+            <i class="fab fa-node"></i>
+            <span>NodeJS</span>
+          </div>
+          <div class="skill animate-pop-in mysql-icon">
+            <i class="fas fa-database"></i>
+            <span>MySQL</span>
+          </div>
         </div>
-        <div class="skill animate-pop-in">
-          <i class="fab fa-css3-alt"></i>
-          <span>CSS</span>
-        </div>
-        <div class="skill animate-pop-in">
-          <i class="fab fa-git"></i>
-          <span>Git</span>
-        </div>
-        <div class="skill animate-pop-in">
-          <i class="fab fa-bootstrap"></i>
-          <span>Bootstrap</span>
-        </div>
-        <div class="skill animate-pop-in figma-icon">
-          <i class="fab fa-figma"></i>
-          <span>Figma</span>
-        </div>
-        <div class="skill animate-pop-in">
-          <i class="fab fa-js-square"></i>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill animate-pop-in vuejs-icon">
-          <i class="fab fa-vuejs"></i>
-          <span>VueJS</span>
-        </div>
-        <div class="skill animate-pop-in nodejs-icon">
-          <i class="fab fa-node"></i>
-          <span>NodeJS</span>
-        </div>
-        <div class="skill animate-pop-in mysql-icon">
-          <i class="fas fa-database"></i>
-          <span>MySQL</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="section-divider" />
+      <hr class="section-divider" />
 
-    <section class="soft-skills animate-fade-in">
-      <h2>Soft Skills</h2>
-      <ul>
-        <li>Leadership</li>
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Problem-Solving</li>
-      </ul>
-    </section>
-  </div>
-</template>
+      <section class="soft-skills animate-fade-in">
+  <h2>Soft Skills</h2>
+  <ul>
+    <li><i class="fas fa-user-tie"></i> Leadership</li>
+    <li><i class="fas fa-comments"></i> Communication</li>
+    <li><i class="fas fa-users"></i> Teamwork</li>
+    <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
+  </ul>
+</section>
+    </div>
+  </template>
 
-<script>
-export default {
-  name: 'AboutView'
-};
-</script>
+  <script>
+  export default {
+    name: 'AboutView'
+  };
+  </script>
 
-<style scoped>
+  <style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 /* Colors */
 :root {
@@ -110,6 +112,7 @@ export default {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
+  font-family: 'Open Sans', sans-serif; /* Updated font-family */
 }
 
 .skills, .soft-skills, .hobbies {
@@ -148,16 +151,12 @@ h2 {
 }
 
 /* Updated hover effect with blue outline */
-/* Updated hover effect with blue outline */
-/* Updated hover effect with navbar color */
 .skill:hover i {
   transform: scale(1.1);
   color: var(--primary-color);
   outline: 3px solid #00ADB5; /* Match navbar hover color */
   outline-offset: 5px;
 }
-
-
 
 .skill span {
   font-size: 1rem;
@@ -191,6 +190,13 @@ h2 {
   margin: 5px 0;
   padding: 5px 0;
   border-bottom: 1px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.soft-skills li i {
+  margin-right: 10px; /* Space between icon and text */
+  color: var(--accent-color); /* Match icon color with accent color */
 }
 
 .hobbies p {
@@ -271,4 +277,4 @@ h2 {
   animation: popIn 0.6s ease forwards;
   opacity: 0;
 }
-</style>
+  </style>
