@@ -1,54 +1,51 @@
 <template>
   <div class="education-experience-container">
+    <!-- Education Section -->
     <div class="education-section">
       <h2 class="section-heading">Education</h2>
-      <div class="timeline">
-        <transition-group name="fade-slide" tag="div">
-          <div 
-            class="timeline-item"
-            v-for="(event, index) in educationTimeline" 
-            :key="index"
-            :class="index % 2 === 0 ? 'image-left' : 'image-right'"
-          >
-            <img 
-              v-if="event.logo" 
-              :src="event.logo" 
-              alt="Logo"
-              class="timeline-logo"
-            />
-            <div class="timeline-content">
-              <div class="timeline-date">{{ event.date }}</div>
-              <h3 class="timeline-title">{{ event.title }}</h3>
-              <p class="timeline-description">{{ event.description }}</p>
-            </div>
-          </div>
-        </transition-group>
+      
+      <!-- LifeChoices Academy -->
+      <div class="education-item left-animated">
+        <img src="https://danielumetor.github.io/allimages/images/download.png" alt="LifeChoices Academy" class="education-image">
+        <div class="education-text">
+          <h3>Full Stack Coding Course at LifeChoices Coding Academy</h3>
+          <p>April 2024 - September 2024</p>
+          <p>
+            Graduated from an intensive full-stack development bootcamp focused on modern web technologies as well as personal and professional development. 
+            Learned how to work in a fast-paced environment, collaborate with teams, and tackle real-world coding challenges.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bellville Technical High School -->
+      <div class="education-item right-animated">
+        <div class="education-text">
+          <h3>Bellville Technical High School</h3>
+          <p>2018 - 2023</p>
+          <p>
+            Completed Matric with a Bachelor’s Pass, specializing in technology and engineering subjects. 
+            Excelled in key subjects such as Engineering Graphics and Design (EGD), Mathematics, and Physical Sciences, fostering a strong analytical mindset.
+          </p>
+        </div>
+        <img src="https://danielumetor.github.io/allimages/images/bths.jfif" alt="Bellville Technical High School" class="education-image">
       </div>
     </div>
 
+    <!-- Experience Section -->
     <div class="experience-section">
       <h2 class="section-heading">Experience</h2>
-      <div class="timeline">
-        <transition-group name="fade-slide" tag="div">
-          <div 
-            class="timeline-item"
-            v-for="(job, index) in experienceTimeline" 
-            :key="index"
-            :class="index % 2 === 0 ? 'image-left' : 'image-right'"
-          >
-            <img 
-              v-if="job.logo" 
-              :src="job.logo" 
-              alt="Logo"
-              class="timeline-logo"
-            />
-            <div class="timeline-content">
-              <div class="timeline-date">{{ job.date }}</div>
-              <h3 class="timeline-title">{{ job.title }}</h3>
-              <p class="timeline-description">{{ job.description }}</p>
-            </div>
-          </div>
-        </transition-group>
+      
+      <!-- LC Studio -->
+      <div class="experience-item left-animated">
+        <img src="https://danielumetor.github.io/allimages/download%20(1).png" alt="LC Studio" class="experience-image">
+        <div class="experience-text">
+          <h3>Intern at LC Studio</h3>
+          <p>September 2024 - Present</p>
+          <p>
+            At LC Studio, I gained hands-on experience in WordPress website development, collaborating with experienced developers on various projects. 
+            This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -56,123 +53,24 @@
 
 <script>
 export default {
-  name: 'EducationView',
-  setup() {
-    const educationTimeline = [
-      {
-        date: 'April 2024 - September 2024',
-        title: 'Full Stack Coding Course at LifeChoices Coding Academy',
-        description: 'Graduated from an intensive full-stack development bootcamp focused on modern web technologies as well as Personal and Professional Development.',
-        logo: 'https://danielumetor.github.io/allimages/images/download.png' // LifeChoices Academy logo
-      },
-      {
-        date: '2018 - 2023',
-        title: 'Bellville Technical High School',
-        description: 'Completed Matric with a Bachelor\'s Pass, specializing in technology and engineering subjects.',
-        logo: 'https://danielumetor.github.io/allimages/images/bths.jfif' // Bellville Technical High School logo
-      }
-    ];
+  name: 'EducationExperienceView',
+  mounted() {
+    // Scroll animations for items as they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
 
-    const experienceTimeline = [
-      {
-        date: 'September 2024 - Present',
-        title: 'Intern at LC Studio',
-        description: 'At LC Studio, individuals can learn about WordPress website development...',
-        logo: 'https://danielumetor.github.io/allimages/download%20(1).png' // LC Studio logo
-      }
-    ];
-
-    return {
-      educationTimeline,
-      experienceTimeline
-    };
+    // Targeting all education and experience items
+    const items = document.querySelectorAll('.education-item, .experience-item');
+    items.forEach(item => observer.observe(item));
   }
 };
+
 </script>
 
-<style scoped>
-.education-experience-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 40px;
-  padding: 20px;
-  background-color: #0D0D0D;
-  color: #EEEEEE;
-  font-family: 'Lato', sans-serif; 
-}
-
-@media (max-width: 768px) {
-  .education-experience-container {
-    grid-template-columns: 1fr; /* Single column layout */
-  }
-}
-
-.section-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #3E7CB1;
-  text-align: center;
-}
-
-.timeline {
-  padding: 20px;
-  background-color: #1E1E1E;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.timeline-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  gap: 20px;
-}
-
-.timeline-content {
-  padding: 10px;
-  background-color: #2A2A2A;
-  border-radius: 8px;
-  width: 60%;
-}
-
-.timeline-logo {
-  width: 12rem;
-  object-fit: contain;
-}
-
-.image-left {
-  flex-direction: row;
-}
-
-.image-right {
-  flex-direction: row-reverse;
-}
-
-.timeline-date {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #3E7CB1;
-}
-
-.timeline-title {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.timeline-description {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Animation Styles */
-.fade-slide-enter-active, .fade-slide-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-slide-enter, .fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-</style>

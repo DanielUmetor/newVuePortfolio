@@ -1,12 +1,22 @@
-  <template>
-    <div class="about-container">
-      <section class="intro">
-        <h1 class="animate-slide-in">About Me</h1>
-        <p class="animate-fade-in">
-          I am Daniel Umetor, a 19-year-old high school graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
-        </p>
-      </section>
+<template>
+  <div class="about-container">
+    <div class="about-content">
+      <!-- Image on the left, ending by the "evolving as a developer" text -->
+      <img class="profile-pic" src="https://danielumetor.github.io/allimages/MatricPic.jpg" alt="Daniel Umetor" />
+      
+      <!-- Text content on the right -->
+      <div class="about-text">
+        <section class="intro">
+          <h1 class="animate-slide-in">About Me</h1>
+          <p class="animate-fade-in">
+            I am Daniel Umetor, a 19-year-old high school graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
+          </p>
+        </section>
+      </div>
+    </div>
 
+    <!-- Centered content below the image and About Me section -->
+    <div class="centered-content">
       <hr class="section-divider" />
 
       <section class="skills animate-fade-in">
@@ -54,25 +64,26 @@
       <hr class="section-divider" />
 
       <section class="soft-skills animate-fade-in">
-  <h2>Soft Skills</h2>
-  <ul>
-    <li><i class="fas fa-user-tie"></i> Leadership</li>
-    <li><i class="fas fa-comments"></i> Communication</li>
-    <li><i class="fas fa-users"></i> Teamwork</li>
-    <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
-  </ul>
-</section>
+        <h2>Soft Skills</h2>
+        <ul>
+          <li><i class="fas fa-user-tie"></i> Leadership</li>
+          <li><i class="fas fa-comments"></i> Communication</li>
+          <li><i class="fas fa-users"></i> Teamwork</li>
+          <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
+        </ul>
+      </section>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
-  export default {
-    name: 'AboutView'
-  };
-  </script>
+<script>
+export default {
+  name: 'AboutView'
+};
+</script>
 
-  <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
@@ -83,25 +94,53 @@
   --accent-color: #3E7CB1;  /* Muted blue */
   --background-color: #F5F5F5; /* Light grey background */
   --text-color: #4A4A4A; /* Darker grey for text */
+  --navbar-hover-color: #00ADB5; /* Light blue color for headings and navbar */
 }
 
 .about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Lora', serif;
 }
 
+/* Container to hold both the image and text */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Image styling with fixed height */
+.profile-pic {
+  width: 40%; /* Set a decent width */
+  max-height: 32rem; /* Set height to end by the text */
+  object-fit: cover;
+  margin-right: 40px; /* Adds space between the image and text */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Text content styling */
+.about-text {
+  width: 50%;
+}
+
+/* Center intro text */
 .intro {
-  text-align: center;
-  margin-bottom: 50px;
+  text-align: left;
 }
 
 .intro h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
-  color: var(--primary-color);
+  color: #00ADB5; /* Light blue for About Me heading */
   border-bottom: 2px solid var(--accent-color);
   display: inline-block;
   padding-bottom: 10px;
@@ -110,20 +149,25 @@
 .intro p {
   font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.8;
-  font-family: 'Open Sans', sans-serif; /* Updated font-family */
+  font-family: 'Open Sans', sans-serif;
 }
 
-.skills, .soft-skills, .hobbies {
-  margin-bottom: 50px;
+/* Center the content below the image */
+.centered-content {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
 }
 
-h2 {
+/* Skills section */
+.skills h2, 
+.soft-skills h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
-  color: var(--primary-color);
+  color: #00ADB5; /* Light blue for headings */
   border-left: 4px solid var(--accent-color);
   padding-left: 15px;
 }
@@ -180,9 +224,14 @@ h2 {
   grid-row: 2;    /* Moves Figma to the second row */
 }
 
+.soft-skills {
+  text-align: center; /* Centers the content */
+}
+
 .soft-skills ul {
   list-style-type: none;
   padding: 0;
+  display: inline-block; /* Ensures the ul is centered */
 }
 
 .soft-skills li {
@@ -192,35 +241,23 @@ h2 {
   border-bottom: 1px solid var(--accent-color);
   display: flex;
   align-items: center;
+  justify-content: center; /* Centers the content within each li */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
 }
 
 .soft-skills li i {
   margin-right: 10px; /* Space between icon and text */
   color: var(--accent-color); /* Match icon color with accent color */
+  transition: color 0.3s ease; /* Smooth transition for icon color */
 }
 
-.hobbies p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: var(--text-color);
+.soft-skills li:hover {
+  background-color: rgba(224, 247, 250, 0.5); /* Subtle transparent background color on hover */
+  color: var(--primary-color); /* Change text color on hover */
 }
 
-.contact {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.contact a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.contact a:hover {
-  color: var(--primary-color);
+.soft-skills li:hover i {
+  color: var(--primary-color); /* Change icon color on hover */
 }
 
 /* Section Divider */
@@ -240,17 +277,6 @@ h2 {
   }
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes popIn {
   0% {
     transform: scale(0.8);
@@ -262,14 +288,20 @@ h2 {
   }
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
-  opacity: 0;
-}
-
-.animate-slide-in {
-  animation: slideIn 1s ease forwards;
   opacity: 0;
 }
 
@@ -277,4 +309,9 @@ h2 {
   animation: popIn 0.6s ease forwards;
   opacity: 0;
 }
-  </style>
+
+.animate-slide-in {
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+</style>
