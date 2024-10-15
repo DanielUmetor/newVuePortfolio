@@ -1,51 +1,47 @@
 <template>
   <div class="education-experience-container">
-    <!-- Education Section -->
-    <div class="education-section">
-      <h2 class="section-heading">Education</h2>
-      
+    <h2 class="section-heading">Education</h2>
+    <div class="timeline">
       <!-- LifeChoices Academy -->
-      <div class="education-item left-animated">
-        <img src="https://danielumetor.github.io/allimages/images/download.png" alt="LifeChoices Academy" class="education-image">
-        <div class="education-text">
-          <h3>Full Stack Coding Course at LifeChoices Coding Academy</h3>
-          <p>April 2024 - September 2024</p>
+      <div class="timeline-item left-animated">
+        <div class="timeline-content move-left"> <!-- Added move-left class -->
+            <h3>Full Stack Coding Course at LifeChoices Coding Academy</h3>
+          <p class="timeline-date">April 2024 - September 2024</p>
           <p>
             Graduated from an intensive full-stack development bootcamp focused on modern web technologies as well as personal and professional development. 
             Learned how to work in a fast-paced environment, collaborate with teams, and tackle real-world coding challenges.
           </p>
         </div>
+        <img src="https://danielumetor.github.io/allimages/images/download.png" alt="LifeChoices Academy" class="timeline-image" />
       </div>
 
       <!-- Bellville Technical High School -->
-      <div class="education-item right-animated">
-        <div class="education-text">
+      <div class="timeline-item right-animated">
+        <img src="https://danielumetor.github.io/allimages/images/bths.jfif" alt="Bellville Technical High School" class="bths" />
+        <div class="timeline-content move-right"> <!-- Added move-right class -->
           <h3>Bellville Technical High School</h3>
-          <p>2018 - 2023</p>
+          <p class="timeline-date">2018 - 2023</p>
           <p>
             Completed Matric with a Bachelor’s Pass, specializing in technology and engineering subjects. 
             Excelled in key subjects such as Engineering Graphics and Design (EGD), Mathematics, and Physical Sciences, fostering a strong analytical mindset.
           </p>
         </div>
-        <img src="https://danielumetor.github.io/allimages/images/bths.jfif" alt="Bellville Technical High School" class="education-image">
       </div>
     </div>
 
-    <!-- Experience Section -->
-    <div class="experience-section">
-      <h2 class="section-heading">Experience</h2>
-      
+    <h2 class="section-heading">Experience</h2>
+    <div class="timeline">
       <!-- LC Studio -->
-      <div class="experience-item left-animated">
-        <img src="https://danielumetor.github.io/allimages/download%20(1).png" alt="LC Studio" class="experience-image">
-        <div class="experience-text">
+      <div class="timeline-item left-animated">
+        <div class="timeline-content move-left"> <!-- Added move-left class -->
           <h3>Intern at LC Studio</h3>
-          <p>September 2024 - Present</p>
+          <p class="timeline-date">September 2024 - Present</p>
           <p>
-            At LC Studio, I gained hands-on experience in WordPress website development, collaborating with experienced developers on various projects. 
+             At LC Studio, you engage in web development projects, focusing on leveraging technology to empower youth talent in South Africa. The agency emphasizes providing tech services while supporting youth skill development in areas like web design and development.
             This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
           </p>
         </div>
+        <img src="https://danielumetor.github.io/allimages/download%20(1).png" alt="Intern at LC Studio" class="timeline-image" />
       </div>
     </div>
   </div>
@@ -66,11 +62,121 @@ export default {
       threshold: 0.2
     });
 
-    // Targeting all education and experience items
-    const items = document.querySelectorAll('.education-item, .experience-item');
+    // Targeting all timeline items
+    const items = document.querySelectorAll('.timeline-item');
     items.forEach(item => observer.observe(item));
   }
 };
-
 </script>
 
+<style scoped>
+.education-experience-container {
+  padding: 40px;
+  background-color: #030509; /* Dark background */
+  color: #b2b2b2; /* Light gray text */
+  font-family: 'Lora', serif;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #00ADB5;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px 0; 
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #00ADB5; /* Color for the vertical line */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.bths{
+  margin-right: 5rem;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Left Side Items */
+.timeline-item.left-animated {
+  justify-content: flex-start;  
+}
+
+/* Right Side Items */
+.timeline-item.right-animated {
+  justify-content: flex-end;
+}
+
+/* Move text 5rem to the left */
+.move-left {
+  transform: translateX(-5rem);
+}
+
+/* Move text 5rem to the right */
+.move-right {
+  transform: translateX(5rem);
+}
+
+/* Timeline Content */
+.timeline-content {
+  width: 45%; /* Width of the content */
+  background-color:#030509; /* Background for content */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Relative positioning for the timeline */
+  transition: transform 0.5s; /* Smooth transform animation */
+}
+
+/* Timeline Image */
+.timeline-image {
+  width: 17rem; /* Adjust as necessary */
+  height: 17rem; /* Keep aspect ratio */
+  margin-left: 60px; /* Increased space between content and image */
+}
+
+/* Timeline Dates */
+.timeline-date {
+  font-size: 1rem;
+  color: #00ADB5; /* Color for the dates */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Animation Class */
+.in-view {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Slight upward movement */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+</style>
+  

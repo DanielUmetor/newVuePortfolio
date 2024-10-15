@@ -119,12 +119,14 @@ export default {
 
 /* Image styling with fixed height */
 .profile-pic {
-  width: 40%; /* Set a decent width */
-  max-height: 32rem; /* Set height to end by the text */
-  object-fit: cover;
-  margin-right: 40px; /* Adds space between the image and text */
+  width: 40%; /* Keep the width consistent */
+  max-height: 28rem; /* Reduce the height slightly */
+  object-fit: contain; /* Ensure the image is fully displayed */
+  margin-right: 40px; /* Space between the image and text */
   border-radius: 8px; /* Optional rounded corners */
+  clip-path: inset(0% 0% 5% 0%); /* Crop a small portion from the bottom */
 }
+
 
 /* Text content styling */
 .about-text {
