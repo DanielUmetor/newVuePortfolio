@@ -178,6 +178,7 @@ export default {
   justify-content: center;
 }
 
+/* Buttons */
 .card .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -190,12 +191,13 @@ export default {
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card .btn:hover {
-  background: linear-gradient(45deg, var(--primary-color), #3c6f92);
+  background-color: #00FFFF; /* Aqua Blue on Hover */
+  color: black; /* Change text color to black for contrast */
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
@@ -206,12 +208,16 @@ export default {
 }
 
 .github-btn:hover {
-  background-color: #161b22;
+  background-color: #00FFFF; /* Aqua Blue on Hover */
+  color: black; /* Change text color to black for contrast */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .github-btn i {
   margin-right: 8px;
 }
+
 
 /* Animation */
 @keyframes cardAppear {
