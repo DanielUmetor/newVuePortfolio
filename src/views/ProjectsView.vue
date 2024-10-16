@@ -85,6 +85,7 @@ export default {
 
 .heading{
   color: #02D8E9;
+
 }
 
 .projects-container {

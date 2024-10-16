@@ -4,11 +4,11 @@
       <img src="https://danielumetor.github.io/allimages/images/mylogo.png" alt="Logo">
     </div>
     <ul class="nav-links">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About Me</router-link></li>
-      <li><router-link to="/education">Education & Experience</router-link></li>
-      <li><router-link to="/projects">Projects</router-link></li>
-      <li><router-link to="/contact">Contact Info</router-link></li>
+      <li><router-link to="/" exact-active-class="active" active-class="active-link">Home</router-link></li>
+      <li><router-link to="/about" exact-active-class="active" active-class="active-link">About Me</router-link></li>
+      <li><router-link to="/education" exact-active-class="active" active-class="active-link">Education & Experience</router-link></li>
+      <li><router-link to="/projects" exact-active-class="active" active-class="active-link">Projects</router-link></li>
+      <li><router-link to="/contact" exact-active-class="active" active-class="active-link">Contact Info</router-link></li>
     </ul>
   </nav>
 </template>
@@ -25,19 +25,13 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
   },
-  beforeUnmount() {  // Use beforeUnmount instead of beforeDestroy
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll() {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > this.lastScrollY) {
-        // Scrolling down
-        this.isHidden = true;
-      } else {
-        // Scrolling up
-        this.isHidden = false;
-      }
+      this.isHidden = currentScrollY > this.lastScrollY; // Hide when scrolling down
       this.lastScrollY = currentScrollY;
     },
   },
@@ -105,12 +99,14 @@ export default {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-links a:hover::before {
+.nav-links a:hover::before,
+.nav-links a.active-link::before { /* Active link effect */
   visibility: visible;
   transform: scaleX(1);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active-link { /* Change color for active link */
   color: #00ADB5;
 }
 </style>
