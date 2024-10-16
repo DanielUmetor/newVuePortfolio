@@ -34,10 +34,10 @@ export default {
       cards: [
         {
           title: "GameVaults",
-          copy: "A Gaming E-Commerce Store Selling The Best Games Available.",
+          copy: "A Full Stack Gaming E-Commerce Store Selling The Best Games Available.",
           button: "View More",
           link: "https://capstone-dfd59.web.app/",
-          github: "https://github.com/DanielUmetor/Capstone.git", // Add GitHub link
+          github: "https://github.com/DanielUmetor/Capstone.git", 
           image: "https://danielumetor.github.io/allimages/game%20store%20icon.png",
         },
         {
@@ -71,7 +71,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-/* Colors */
 :root {
   --primary-color: #333333;
   --accent-color: #3E7CB1;
@@ -84,15 +83,17 @@ export default {
 
 .projects-container {
   padding: 40px;
-  background-color: var(--background-color); /* Consistent background color */
+  background-color: var(--background-color); 
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
 }
 
 .projects-container h1 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px; /* More spacing for the title */
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   display: inline-block;
@@ -101,14 +102,12 @@ export default {
   text-transform: uppercase;
 }
 
-/* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Improved grid */
+  gap: 30px; /* More space between cards */
 }
 
-/* Project card */
 .project-card {
   background-color: var(--card-background);
   border: 2px solid var(--card-border);
@@ -130,17 +129,10 @@ export default {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  height: 350px;
+  height: 300px; /* Slightly reduced height */
   text-align: center;
-  overflow: hidden;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  transition: filter 0.3s ease;
-}
-
-.project-card:hover .card {
-  filter: brightness(1.1);
 }
 
 .card .content {
@@ -171,18 +163,15 @@ export default {
   margin-bottom: 1rem;
 }
 
-/* Buttons */
 .button-group {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
 }
 
-/* Buttons */
 .card .btn {
-  display: inline-block;
   padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Slightly larger font */
   font-weight: bold;
   text-transform: uppercase;
   background: linear-gradient(45deg, var(--accent-color), #5ea6db);
@@ -191,57 +180,30 @@ export default {
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card .btn:hover {
-  background-color: #00FFFF; /* Aqua Blue on Hover */
-  color: black; /* Change text color to black for contrast */
+  background: #00ffff; /* Aqua blue color */
+  color: #000; /* Black text for visibility */
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}
-
-/* GitHub button */
-.github-btn {
-  background-color: #24292e;
 }
 
 .github-btn:hover {
-  background-color: #00FFFF; /* Aqua Blue on Hover */
-  color: black; /* Change text color to black for contrast */
+  background: #00ffff; /* Aqua blue color */
+  color: #000; /* Black text for visibility */
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+.github-btn:hover {
+  background-color: #161b22;
 }
 
 .github-btn i {
   margin-right: 8px;
-}
-
-
-/* Animation */
-@keyframes cardAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease forwards;
-  opacity: 0;
 }
 </style>
