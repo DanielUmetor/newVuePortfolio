@@ -1,6 +1,8 @@
 <template>
   <div class="projects-container">
-    <h1 class="animate-slide-in">My Projects</h1>
+    <div class="heading">
+      <h1 class="animate-slide-in">My Projects</h1>
+    </div>
     <div class="projects-grid">
       <div
         v-for="(card, index) in cards"
@@ -56,7 +58,7 @@ export default {
         },
         {
           title: "Keyboard",
-          copy: "A keyboard built using HTML, CSS and Javascript.",
+          copy: "A keyboard built using HTML and CSS.",
           link: "https://keyboard-js.vercel.app/",
           github: "https://github.com/DanielUmetor/keyboard-js.git",
           image: "https://danielumetor.github.io/allimages/keyboard.jpeg",
@@ -79,6 +81,10 @@ export default {
   --text-color: #EEEEEE;
   --card-border: #3E7CB1;
   --shadow-color: rgba(62, 124, 177, 0.5);
+}
+
+.heading{
+  color: #02D8E9;
 }
 
 .projects-container {
