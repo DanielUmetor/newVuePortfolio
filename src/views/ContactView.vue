@@ -6,18 +6,15 @@
       <div class="contact-wrapper">
         <!-- Contact Form Section -->
         <div class="contact-form-wrapper">
-          <form class="contact-form" @submit.prevent="sendEmail">
+          <form class="contact-form" action="https://formspree.io/f/xqakknll" method="POST">
             <div class="form-group">
-        
-              <input type="text" v-model="name" placeholder="Your Name" required />
+              <input type="text" name="name" v-model="name" placeholder="Your Name" required />
             </div>
             <div class="form-group">
-        
-              <input type="email" v-model="email" placeholder="Your Email" required />
+              <input type="email" name="email" v-model="email" placeholder="Your Email" required />
             </div>
             <div class="form-group">
-           
-              <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
+              <textarea name="message" v-model="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
           </form>
@@ -66,7 +63,6 @@
   </transition>
 </template>
 
-
 <script>
 export default {
   name: "ContactView",
@@ -76,15 +72,10 @@ export default {
       email: "",
       message: ""
     };
-  },
-  methods: {
-    sendEmail() {
-      // Your email sending logic goes here
-      alert('Message sent successfully!');
-    }
   }
 };
 </script>
+
 
 <style scoped>
 .contact-page {
