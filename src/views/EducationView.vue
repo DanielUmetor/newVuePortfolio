@@ -41,7 +41,7 @@
             This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
           </p>
         </div>
-        <img src="https://danielumetor.github.io/allimages/download%20(1).png" alt="Intern at LC Studio" class="timeline-image" />
+        <img src="https://danielumetor.github.io/allimages/lc%20studio.jpg" alt="Intern at LC Studio" class="timeline-image" />
       </div>
     </div>
   </div>
