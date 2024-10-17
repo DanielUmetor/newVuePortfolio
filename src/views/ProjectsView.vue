@@ -63,6 +63,20 @@ export default {
           github: "https://github.com/DanielUmetor/keyboard-js.git",
           image: "https://danielumetor.github.io/allimages/keyboard.jpeg",
         },
+        {
+          title: "Wristify",
+          copy: "A E-Commerce Watch Website built using Javascript.",
+          link: "https://wristify.vercel.app/",
+          github: "https://github.com/DanielUmetor/js-ecommerce.git",
+          image: "https://danielumetor.github.io/allimages/second%20logo%20for%20wristify.webp"
+        },
+        {
+          title: "Temperature Converter",
+          copy: "A temperature converter used to convert temperature units.",
+          link: "https://temperature-converter-bay.vercel.app/",
+          github: "https://github.com/DanielUmetor/temperatureConverter.git",
+          image: "https://danielumetor.github.io/allimages/tc%20converter.png"    
+        }
       ],
     };
   },
