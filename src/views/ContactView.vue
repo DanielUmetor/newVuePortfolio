@@ -40,7 +40,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <div class="info-text">
               <h3>Location</h3>
-              <p>24 Postma Street, Oakdale, Bellville</p>
+              <p>Bellville, Cape Town</p>
             </div>
           </div>
           <div class="contact-item">
