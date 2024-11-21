@@ -78,12 +78,71 @@ export default {
 
 .profile-image {
   border-radius: 50%;
-  width: 450px; /* Increased size for the circle */
-  height: 450px; /* Increased size */
+  width: 450px;
+  height: 450px;
   object-fit: cover;
-  object-position: top; /* Ensures the head is fully shown */
+  object-position: top;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   animation: fadeIn 4s ease-in-out;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .image-section {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .welcome-text {
+    font-size: 2.5em;
+  }
+
+  .sub-text {
+    font-size: 1.5em;
+  }
+
+  .profile-image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 2em;
+  }
+
+  .sub-text {
+    font-size: 1.2em;
+  }
+
+  .profile-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.5em;
+  }
+
+  .sub-text {
+    font-size: 1em;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 /* Animation for fade-in effect */

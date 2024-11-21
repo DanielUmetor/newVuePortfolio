@@ -108,32 +108,28 @@ export default {
   font-family: 'Lora', serif;
 }
 
-/* Container to hold both the image and text */
 .about-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
 }
 
-/* Image styling with fixed height */
 .profile-pic {
-  width: 40%; /* Keep the width consistent */
-  max-height: 28rem; /* Reduce the height slightly */
-  object-fit: contain; /* Ensure the image is fully displayed */
-  margin-right: 40px; /* Space between the image and text */
-  border-radius: 8px; /* Optional rounded corners */
-  clip-path: inset(0% 0% 5% 0%); /* Crop a small portion from the bottom */
+  width: 40%;
+  max-height: 28rem;
+  object-fit: contain;
+  margin-right: 40px;
+  border-radius: 8px;
+  clip-path: inset(0% 0% 5% 0%);
 }
 
-
-/* Text content styling */
 .about-text {
   width: 50%;
 }
 
-/* Center intro text */
 .intro {
   text-align: left;
 }
@@ -142,7 +138,7 @@ export default {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
-  color: #00ADB5; /* Light blue for About Me heading */
+  color: #00ADB5;
   border-bottom: 2px solid var(--accent-color);
   display: inline-block;
   padding-bottom: 10px;
@@ -156,28 +152,26 @@ export default {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Center the content below the image */
 .centered-content {
   width: 100%;
   text-align: center;
   margin-top: 50px;
 }
 
-/* Skills section */
 .skills h2, 
 .soft-skills h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
-  color: #00ADB5; /* Light blue for headings */
+  color: #00ADB5;
   border-left: 4px solid var(--accent-color);
   padding-left: 15px;
 }
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 40px 30px; /* Adds horizontal and vertical spacing */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
   justify-items: center;
   margin-bottom: 30px;
 }
@@ -186,7 +180,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0; /* Adds vertical spacing around each skill */
+  margin: 20px 0;
 }
 
 .skill i {
@@ -196,11 +190,10 @@ export default {
   transition: transform 0.3s ease, color 0.3s ease, outline 0.3s ease;
 }
 
-/* Updated hover effect with blue outline */
 .skill:hover i {
   transform: scale(1.1);
   color: var(--primary-color);
-  outline: 3px solid #00ADB5; /* Match navbar hover color */
+  outline: 3px solid #00ADB5;
   outline-offset: 5px;
 }
 
@@ -208,32 +201,10 @@ export default {
   font-size: 1rem;
 }
 
-.nodejs-icon {
-  grid-column: 2; /* Keeps NodeJS in the middle column */
-}
-
-.vuejs-icon {
-  grid-column: 2; /* VueJS remains in the middle column */
-  grid-row: 2;   /* Moves VueJS to the second row */
-}
-
-.mysql-icon {
-  grid-column: 3; /* Positions MySQL next to NodeJS */
-}
-
-.figma-icon {
-  grid-column: 1; /* Positions Figma under Bootstrap */
-  grid-row: 2;    /* Moves Figma to the second row */
-}
-
-.soft-skills {
-  text-align: center; /* Centers the content */
-}
-
 .soft-skills ul {
   list-style-type: none;
   padding: 0;
-  display: inline-block; /* Ensures the ul is centered */
+  display: inline-block;
 }
 
 .soft-skills li {
@@ -243,77 +214,74 @@ export default {
   border-bottom: 1px solid var(--accent-color);
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers the content within each li */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .soft-skills li i {
-  margin-right: 10px; /* Space between icon and text */
-  color: var(--accent-color); /* Match icon color with accent color */
-  transition: color 0.3s ease; /* Smooth transition for icon color */
+  margin-right: 10px;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
 }
 
 .soft-skills li:hover {
-  background-color: rgba(224, 247, 250, 0.5); /* Subtle transparent background color on hover */
-  color: var(--primary-color); /* Change text color on hover */
+  background-color: rgba(224, 247, 250, 0.5);
+  color: var(--primary-color);
 }
 
 .soft-skills li:hover i {
-  color: var(--primary-color); /* Change icon color on hover */
+  color: var(--primary-color);
 }
 
-/* Section Divider */
 .section-divider {
   margin: 40px 0;
   border: 0;
   border-top: 1px solid var(--accent-color);
 }
 
-/* Keyframe animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+/* Media Queries */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
   }
-  100% {
-    opacity: 1;
+
+  .profile-pic {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+    gap: 20px;
   }
 }
 
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 100%;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+
+  .intro h1 {
+    font-size: 2rem;
   }
-}
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
+  .intro p {
+    font-size: 1rem;
   }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+
+  .skills-container {
+    grid-template-columns: 1fr; /* Single column for small screens */
   }
-}
 
-/* Animation classes */
-.animate-fade-in {
-  animation: fadeIn 0.8s ease forwards;
-  opacity: 0;
-}
-
-.animate-pop-in {
-  animation: popIn 0.6s ease forwards;
-  opacity: 0;
-}
-
-.animate-slide-in {
-  animation: slideIn 1s ease forwards;
-  opacity: 0;
+  .skill i {
+    font-size: 40px;
+  }
 }
 </style>
