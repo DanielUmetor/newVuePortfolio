@@ -57,11 +57,11 @@ export default {
           image: "https://danielumetor.github.io/allimages/calclatoricon.png",
         },
         {
-          title: "Keyboard",
-          copy: "A keyboard built using HTML and CSS.",
-          link: "https://keyboard-js.vercel.app/",
-          github: "https://github.com/DanielUmetor/keyboard-js.git",
-          image: "https://danielumetor.github.io/allimages/keyboard.jpeg",
+          title: "Quiz Game",
+          copy: "A basic General Knowledge Quiz to test your knowledge.",
+          link: "https://game-demo-rnz2i58cw-daniels-projects-c927e4ab.vercel.app/",
+          github: "https://github.com/DanielUmetor/Game_Demo.git",
+          image: "https://danielumetor.github.io/allimages/download%20quiz.png",
         },
         {
           title: "Wristify",
