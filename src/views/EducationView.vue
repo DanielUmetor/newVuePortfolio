@@ -77,7 +77,7 @@
 
       <!-- Certificate 4 -->
       <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/certifications/sample-cert.png" alt="Pending...." class="certificate-image" />
+        <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Ethical Hacker" class="certificate-image" />
         <div class="certificate-content">
           <h3>Ethical Hacking</h3>
           <p class="certificate-date">Issued: November 2024</p>
