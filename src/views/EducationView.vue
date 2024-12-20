@@ -241,11 +241,12 @@ export default {
   transform: translateY(-10px);
 }
 
+/* Updated to make images uniform */
 .certificate-image {
-  width: 17rem; /* Fixed width and height for certificate images */
-  height: 17rem;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%;
+  height: 200px; /* Set fixed height for uniformity */
+  object-fit: cover; /* Ensures images fill the space proportionally */
+  border-radius: 4px; /* Optional: rounded corners */
 }
 
 .certificate-content {
@@ -259,4 +260,3 @@ export default {
   font-weight: 600;
 }
 </style>
-  
