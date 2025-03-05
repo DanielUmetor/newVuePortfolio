@@ -17,7 +17,7 @@
 
       <!-- Bellville Technical High School -->
       <div class="timeline-item right-animated">
-        <img src="https://danielumetor.github.io/allimages/images/bths.jfif" alt="Bellville Technical High School" class="bths" width="300px" />
+        <img src="https://danielumetor.github.io/allimages/images/bths.jfif" alt="Bellville Technical High School" class="bths" />
         <div class="timeline-content move-right">
           <h3>Bellville Technical High School</h3>
           <p class="timeline-date">2018 - 2023</p>
@@ -42,6 +42,18 @@
           </p>
         </div>
         <img src="https://danielumetor.github.io/allimages/lc%20studio.jpg" alt="Intern at LC Studio" class="timeline-image" />
+      </div>
+
+      <!-- New Experience -->
+      <div class="timeline-item right-animated">
+        <img src="https://danielumetor.github.io/allimages/outlier.jpeg" alt="New Experience" class="bths" />
+        <div class="timeline-content move-right">
+          <h3>Freelance AI Prompter at Outlier</h3>
+          <p class="timeline-date">November 2024 - March 2025</p>
+          <p>
+            At Outlier, I worked as an AI prompter, crafting, testing, and optimizing prompts to enhance AI output. I collaborated asynchronously and remotely, using Python, JavaScript, and Java to refine prompt structures, analyze data, and implement solutions for specific use cases.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -83,7 +95,14 @@
           <p class="certificate-date">Issued: November 2024</p>
         </div>
       </div>
-
+      
+      <div class="certificate-card">
+        <img src="https://danielumetor.github.io/allimages/certifications/hexsoftwares-page-001.jpg" alt="HexSoftwares" class="certificate-image" />
+        <div class="certificate-content">
+          <h3>HexSoftwares Certificate of Completion</h3>
+          <p class="certificate-date">Issued: January 2025</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
