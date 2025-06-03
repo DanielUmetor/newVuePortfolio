@@ -1,5 +1,47 @@
 <template>
   <div class="education-experience-container">
+    <h2 class="section-heading">Experience</h2>
+    <div class="timeline">
+     
+
+      <!-- Second New Job Experience -->
+      <div class="timeline-item right-animated">
+        <img src="https://danielumetor.github.io/allimages/hexSoftwares.png" alt="Company Name 2" class="bths" />
+        <div class="timeline-content move-right">
+          <h3>Web Developer Intern at HexSoftwares</h3>
+          <p class="timeline-date">January 2025 - February 2025</p>  
+          <p>
+            I collaborated remotely with a team at HexSoftwares on web development projects, where I demonstrated strong problem-solving skills and technical expertise. I consistently met project deadlines, contributed to key tasks, and communicated effectively with my team. Adapting well to the virtual work environment, I reinforced my commitment to delivering high-quality solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- LC Studio -->
+      <div class="timeline-item left-animated">
+        <div class="timeline-content move-left">
+          <h3>Intern at LC Studio</h3>
+          <p class="timeline-date">September 2024 - Present</p>
+          <p>
+            At LC Studio, you engage in web development projects, focusing on leveraging technology to empower youth talent in South Africa. The agency emphasizes providing tech services while supporting youth skill development in areas like web design and development.
+            This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
+          </p>
+        </div>
+        <img src="https://danielumetor.github.io/allimages/lc%20studio.jpg" alt="Intern at LC Studio" class="timeline-image" />
+      </div>
+
+      <!-- Outlier Experience -->
+      <div class="timeline-item right-animated">
+        <img src="https://danielumetor.github.io/allimages/outlier.jpeg" alt="Outlier" class="bths" />
+        <div class="timeline-content move-right">
+          <h3>Freelance AI Prompter at Outlier</h3>
+          <p class="timeline-date">November 2024 - Present</p>
+          <p>
+            At Outlier, I worked as an AI prompter, crafting, testing, and optimizing prompts to enhance AI output. I collaborated asynchronously and remotely, using Python, JavaScript, and Java to refine prompt structures, analyze data, and implement solutions for specific use cases.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <h2 class="section-heading">Education</h2>
     <div class="timeline">
       <!-- LifeChoices Academy -->
@@ -22,36 +64,8 @@
           <h3>Bellville Technical High School</h3>
           <p class="timeline-date">2018 - 2023</p>
           <p>
-            Completed Matric with a Bachelor’s Pass, specializing in technology and engineering subjects.
+            Completed Matric with a Bachelor's Pass, specializing in technology and engineering subjects.
             Excelled in key subjects such as Engineering Graphics and Design (EGD), Mathematics, and Physical Sciences, fostering a strong analytical mindset.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="section-heading">Experience</h2>
-    <div class="timeline">
-      <!-- LC Studio -->
-      <div class="timeline-item left-animated">
-        <div class="timeline-content move-left">
-          <h3>Intern at LC Studio</h3>
-          <p class="timeline-date">September 2024 - Present</p>
-          <p>
-            At LC Studio, you engage in web development projects, focusing on leveraging technology to empower youth talent in South Africa. The agency emphasizes providing tech services while supporting youth skill development in areas like web design and development.
-            This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
-          </p>
-        </div>
-        <img src="https://danielumetor.github.io/allimages/lc%20studio.jpg" alt="Intern at LC Studio" class="timeline-image" />
-      </div>
-
-      <!-- New Experience -->
-      <div class="timeline-item right-animated">
-        <img src="https://danielumetor.github.io/allimages/outlier.jpeg" alt="New Experience" class="bths" />
-        <div class="timeline-content move-right">
-          <h3>Freelance AI Prompter at Outlier</h3>
-          <p class="timeline-date">November 2024 - March 2025</p>
-          <p>
-            At Outlier, I worked as an AI prompter, crafting, testing, and optimizing prompts to enhance AI output. I collaborated asynchronously and remotely, using Python, JavaScript, and Java to refine prompt structures, analyze data, and implement solutions for specific use cases.
           </p>
         </div>
       </div>
@@ -64,7 +78,7 @@
       <div class="certificate-card">
         <img src="https://danielumetor.github.io/allimages/certifications/LC%20Academy.jpeg" alt="Full Stack Web Development Certificate" class="certificate-image" />
         <div class="certificate-content">
-          <h3>Full Stack Web Development</h3>
+          <h3>Full Stack Web Development from LifeChoices Academy</h3>
           <p class="certificate-date">Issued: September 2024</p>
         </div>
       </div>
@@ -73,7 +87,7 @@
       <div class="certificate-card">
         <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20123715.png" alt="AWS" class="certificate-image" />
         <div class="certificate-content">
-          <h3>AWS</h3>
+          <h3>AWS Cloud Practitioner Exam Prep</h3>
           <p class="certificate-date">Issued: October 2024</p>
         </div>
       </div>
@@ -82,7 +96,7 @@
       <div class="certificate-card">
         <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20155720.png" alt="CyberSecurity" class="certificate-image" />
         <div class="certificate-content">
-          <h3>Junior CyberSecurity Analyst</h3>
+          <h3>Junior CyberSecurity Analyst from Cisco NetAcad</h3>
           <p class="certificate-date">Issued: November 2024</p>
         </div>
       </div>
@@ -91,16 +105,26 @@
       <div class="certificate-card">
         <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Ethical Hacker" class="certificate-image" />
         <div class="certificate-content">
-          <h3>Ethical Hacking</h3>
+          <h3>Ethical Hacking from Cisco NetAcad</h3>
+          <p class="certificate-date">Issued: November 2024</p>
+        </div>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="certificate-card">
+        <img src="https://danielumetor.github.io/allimages/certifications/OperatingSystemsBasicsUpdate20250603-26-co94ae.jpg" alt="Operating System Basics" class="certificate-image" />
+        <div class="certificate-content">
+          <h3>Operating System Basics from Cisco NetAcad</h3>
           <p class="certificate-date">Issued: November 2024</p>
         </div>
       </div>
       
+      <!-- Certificate 6 -->
       <div class="certificate-card">
         <img src="https://danielumetor.github.io/allimages/certifications/hexsoftwares-page-001.jpg" alt="HexSoftwares" class="certificate-image" />
         <div class="certificate-content">
-          <h3>HexSoftwares Certificate of Completion</h3>
-          <p class="certificate-date">Issued: January 2025</p>
+          <h3>Web Development Internship from HexSoftwares</h3>
+          <p class="certificate-date">Issued: February 2025</p>
         </div>
       </div>
     </div>
@@ -236,19 +260,22 @@ export default {
 }
 
 .certificates-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
   margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .certificate-card {
   background-color: #030509;
   border: 1px solid #00ADB5;
   border-radius: 8px;
-  width: 300px;
-  padding: 20px;
+  width: 100%;
+  padding: 7.5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,5 +304,25 @@ export default {
   font-size: 1rem;
   color: #00ADB5;
   font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .certificates-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .certificate-card {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 </style>

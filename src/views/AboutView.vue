@@ -9,7 +9,7 @@
         <section class="intro">
           <h1 class="animate-slide-in">About Me</h1>
           <p class="animate-fade-in">
-            I am Daniel Umetor, a 19-year-old high school graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
+            I am Daniel Umetor, a 20-year-old graduate with a passion for coding. My journey started in Grade 9 when I attended a Scratch course to create basic games. I later joined LifeChoices to kickstart my career in the Tech Industry. I am currently doing a Full-Stack Web Development course in LifeChoices Academy. I enjoy playing video games and learning new programming languages. These activities keep me engaged and constantly evolving as a developer.
           </p>
         </section>
       </div>
