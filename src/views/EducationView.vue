@@ -2,8 +2,6 @@
   <div class="education-experience-container">
     <h2 class="section-heading">Experience</h2>
     <div class="timeline">
-     
-
       <!-- Second New Job Experience -->
       <div class="timeline-item right-animated">
         <img src="https://danielumetor.github.io/allimages/hexSoftwares.png" alt="Company Name 2" class="bths" />
@@ -73,58 +71,60 @@
 
     <!-- Certificates Section -->
     <h2 class="section-heading">Certificates</h2>
-    <div class="certificates-section">
-      <!-- Certificate 1 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/certifications/LC%20Academy.jpeg" alt="Full Stack Web Development Certificate" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>Full Stack Web Development from LifeChoices Academy</h3>
-          <p class="certificate-date">Issued: September 2024</p>
+    <div class="certificates-container">
+      <div class="certificates-section">
+        <!-- Certificate 1 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/certifications/LC%20Academy.jpeg" alt="Full Stack Web Development Certificate" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>Full Stack Web Development</h3>
+            <p class="certificate-date">Issued: September 2024</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Certificate 2 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20123715.png" alt="AWS" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>AWS Cloud Practitioner Exam Prep</h3>
-          <p class="certificate-date">Issued: October 2024</p>
+        <!-- Certificate 2 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20123715.png" alt="AWS" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>AWS Cloud Practitioner Exam Prep</h3>
+            <p class="certificate-date">Issued: October 2024</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Certificate 3 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20155720.png" alt="CyberSecurity" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>Junior CyberSecurity Analyst from Cisco NetAcad</h3>
-          <p class="certificate-date">Issued: November 2024</p>
+        <!-- Certificate 3 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/Screenshot%202024-11-20%20155720.png" alt="CyberSecurity" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>Junior CyberSecurity Analyst</h3>
+            <p class="certificate-date">Issued: November 2024</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Certificate 4 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Ethical Hacker" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>Ethical Hacking from Cisco NetAcad</h3>
-          <p class="certificate-date">Issued: November 2024</p>
+        <!-- Certificate 4 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Ethical Hacker" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>Ethical Hacking</h3>
+            <p class="certificate-date">Issued: November 2024</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Certificate 5 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/certifications/OperatingSystemsBasicsUpdate20250603-26-co94ae.jpg" alt="Operating System Basics" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>Operating System Basics from Cisco NetAcad</h3>
-          <p class="certificate-date">Issued: November 2024</p>
+        <!-- Certificate 5 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Operating System Basics" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>Operating System Basics</h3>
+            <p class="certificate-date">Issued: November 2024</p>
+          </div>
         </div>
-      </div>
-      
-      <!-- Certificate 6 -->
-      <div class="certificate-card">
-        <img src="https://danielumetor.github.io/allimages/certifications/hexsoftwares-page-001.jpg" alt="HexSoftwares" class="certificate-image" />
-        <div class="certificate-content">
-          <h3>Web Development Internship from HexSoftwares</h3>
-          <p class="certificate-date">Issued: February 2025</p>
+        
+        <!-- Certificate 6 -->
+        <div class="certificate-card">
+          <img src="https://danielumetor.github.io/allimages/certifications/hexsoftwares-page-001.jpg" alt="HexSoftwares" class="certificate-image" />
+          <div class="certificate-content">
+            <h3>Web Development Internship</h3>
+            <p class="certificate-date">Issued: February 2025</p>
+          </div>
         </div>
       </div>
     </div>
@@ -143,7 +143,7 @@ export default {
       });
     }, { threshold: 0.2 });
 
-    const items = document.querySelectorAll('.timeline-item');
+    const items = document.querySelectorAll('.timeline-item, .certificate-card');
     items.forEach(item => observer.observe(item));
   }
 };
@@ -151,9 +151,9 @@ export default {
 
 <style scoped>
 .education-experience-container {
-  padding: 40px;
-  background-color: #030509; /* Dark background */
-  color: #b2b2b2; /* Light gray text */
+  padding: 40px 20px;
+  background-color: #030509;
+  color: #b2b2b2;
   font-family: 'Lora', serif;
 }
 
@@ -176,7 +176,7 @@ export default {
   content: '';
   position: absolute;
   width: 4px;
-  background-color: #00ADB5; /* Color for the vertical line */
+  background-color: #00ADB5;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -219,26 +219,26 @@ export default {
 
 /* Timeline Content */
 .timeline-content {
-  width: 45%; /* Width of the content */
-  background-color: #030509; /* Background for content */
+  width: 45%;
+  background-color: #030509;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative; /* Relative positioning for the timeline */
-  transition: transform 0.5s; /* Smooth transform animation */
+  position: relative;
+  transition: transform 0.5s;
 }
 
 /* Timeline Image */
 .timeline-image {
-  width: 17rem; /* Adjust as necessary */
-  height: 17rem; /* Keep aspect ratio */
-  margin-left: 60px; /* Increased space between content and image */
+  width: 17rem;
+  height: 17rem;
+  margin-left: 60px;
 }
 
 /* Timeline Dates */
 .timeline-date {
   font-size: 1rem;
-  color: #00ADB5; /* Color for the dates */
+  color: #00ADB5;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -251,21 +251,28 @@ export default {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(10px); /* Slight upward movement */
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Final position */
+    transform: translateY(0);
   }
+}
+
+/* Certificates Container */
+.certificates-container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .certificates-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   margin-top: 40px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,7 +282,7 @@ export default {
   border: 1px solid #00ADB5;
   border-radius: 8px;
   width: 100%;
-  padding: 7.5px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,19 +292,27 @@ export default {
 
 .certificate-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 173, 181, 0.2);
 }
 
 /* Updated to make images uniform */
 .certificate-image {
   width: 100%;
-  height: 200px; /* Set fixed height for uniformity */
-  object-fit: cover; /* Ensures images fill the space proportionally */
-  border-radius: 4px; /* Optional: rounded corners */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .certificate-content {
   text-align: center;
   margin-top: 15px;
+  width: 100%;
+}
+
+.certificate-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #e0e0e0;
 }
 
 .certificate-date {
@@ -306,23 +321,151 @@ export default {
   font-weight: 600;
 }
 
-/* Responsive adjustments */
+/* Responsive Design Improvements */
+@media (max-width: 1200px) {
+  .timeline-image,
+  .bths {
+    width: 15rem;
+    height: 15rem;
+  }
+  
+  .timeline-image {
+    margin-left: 40px;
+  }
+  
+  .bths {
+    margin-right: 4rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .certificates-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
   }
+  
+  .timeline-content {
+    width: 50%;
+  }
+  
+  .move-left,
+  .move-right {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 768px) {
+  .education-experience-container {
+    padding: 20px 15px;
+  }
+  
+  .section-heading {
+    font-size: 1.75rem;
+  }
+  
+  /* Stack timeline items vertically on mobile */
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0;
+  }
+  
+  .timeline-item.right-animated {
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    transform: translateX(0) !important;
+  }
+  
+  .timeline-image,
+  .bths {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 0 20px 60px;
+    order: -1;
+  }
+  
   .certificates-section {
     grid-template-columns: 1fr;
     gap: 30px;
   }
   
   .certificate-card {
-    width: 300px;
+    max-width: 350px;
     margin: 0 auto;
+    width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+  .education-experience-container {
+    padding: 15px 10px;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .timeline::before {
+    left: 15px;
+    width: 3px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    padding: 15px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-image,
+  .bths {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .certificate-card {
+    padding: 15px;
+  }
+  
+  .certificate-image {
+    height: 180px;
+  }
+  
+  .certificate-content h3 {
+    font-size: 1rem;
+  }
+  
+  .certificate-date {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional hover effect for timeline items */
+.timeline-content:hover {
+  box-shadow: 0 4px 12px rgba(0, 173, 181, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 </style>
