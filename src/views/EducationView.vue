@@ -111,7 +111,7 @@
 
         <!-- Certificate 5 -->
         <div class="certificate-card">
-          <img src="https://danielumetor.github.io/allimages/certifications/Screenshot%202024-11-28%20154736.png" alt="Operating System Basics" class="certificate-image" />
+          <img src="https://danielumetor.github.io/allimages/certifications/OperatingSystemsBasicsUpdate20250603-26-co94ae.jpg" alt="Operating System Basics" class="certificate-image" />
           <div class="certificate-content">
             <h3>Operating System Basics</h3>
             <p class="certificate-date">Issued: November 2024</p>
