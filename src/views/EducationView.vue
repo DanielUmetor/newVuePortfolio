@@ -17,7 +17,7 @@
       <!-- LC Studio -->
       <div class="timeline-item left-animated">
         <div class="timeline-content move-left">
-          <h3>Intern at LC Studio</h3>
+          <h3>Software Development Intern at LC Studio</h3>
           <p class="timeline-date">September 2024 - Present</p>
           <p>
             At LC Studio, you engage in web development projects, focusing on leveraging technology to empower youth talent in South Africa. The agency emphasizes providing tech services while supporting youth skill development in areas like web design and development.
@@ -114,7 +114,7 @@
           <img src="https://danielumetor.github.io/allimages/certifications/OperatingSystemsBasicsUpdate20250603-26-co94ae.jpg" alt="Operating System Basics" class="certificate-image" />
           <div class="certificate-content">
             <h3>Operating System Basics</h3>
-            <p class="certificate-date">Issued: November 2024</p>
+            <p class="certificate-date">Issued: October 2024</p>
           </div>
         </div>
         
