@@ -160,7 +160,7 @@ export default {
           copy: "Developed an RFID-based system to monitor employee and staff presence on-site. Each staff member was issued an RFID tag, which was scanned at entry and exit points using RFID readers. The system logged real-time check-ins and check-outs to a centralized database.",
           status: "completed",
           screenshots: true,
-          image: "https://via.placeholder.com/400x300/3E7CB1/ffffff?text=RFID+System",
+          image: "https://danielumetor.github.io/allimages/ChatGPT%20Image%20Jul%201,%202025,%2011_07_29%20AM.png",
           screenshotImages: [
             "https://danielumetor.github.io/allimages/login.jpg",
             "https://danielumetor.github.io/allimages/date%20range.jpg",
@@ -172,7 +172,13 @@ export default {
        
         {
           title: "Python Scraper",
-          copy: "",
+          copy: "A Python-based web scraper that extracts product data from major South African online stores. Users get 5 free searches per day, with an optional premium plan offering unlimited access. Designed for fast, efficient price comparison and product lookup.",
+          status: "development",
+          image: "https://via.placeholder.com/400x300/666666/ffffff?text=In+Development"
+        },
+          {
+          title: "Geo-Location Payment System",
+          copy: "GeoPay is a location-based payment system developed by LC Studio team. It verifies a user's geographic position before authorizing transactions, ensuring payments occur only at approved locations.",
           status: "development",
           image: "https://via.placeholder.com/400x300/666666/ffffff?text=In+Development"
         },
