@@ -18,7 +18,7 @@
       <div class="timeline-item left-animated">
         <div class="timeline-content move-left">
           <h3>Software Development Intern at LC Studio</h3>
-          <p class="timeline-date">September 2024 - Present</p>
+          <p class="timeline-date">September 2024 - September 2025</p>
           <p>
             At LC Studio, you engage in web development projects, focusing on leveraging technology to empower youth talent in South Africa. The agency emphasizes providing tech services while supporting youth skill development in areas like web design and development.
             This opportunity helped refine my understanding of front-end and back-end development and strengthened my skills in problem-solving, debugging, and working within a team-oriented environment.
